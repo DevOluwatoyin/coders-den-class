@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Battle 3</title>
+  </head>
+  <style>
+    .boxes {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .box,
+    .box2,
+    .box3, .box4 {
+      width: 280px;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Inconsolata", monospace;
+      font-size: 28px;
+      border: 1px solid #c39f76;
+      box-sizing: border-box;
+      /* background: radial-gradient(#c39f76, #0000); */
+      /* 16px 16px/62px 62px */
+      /* ,
+        conic-gradient(#fff 75%, #c39f76 0) 0 0/62px 62px; */
+    }
+
+    .box {
+      background: purple url("nft.jpeg") no-repeat;
+      background-color: blue;
+      background-size: 100px;
+      background-position: 16px 30px;
+    }
+
+    .box2 {
+      background: radial-gradient(#c39f76 35%, white 36%);
+      background-position: 16px 16px;
+      background-size: 62px 62px;
+    }
+
+    .box3 {
+      background: conic-gradient(white 75%, #c39f76 0);
+      background-size: 62px 62px;
+      background-position: 0 0;
+    }
+
+    .box4 {
+      font-size: 20px;
+      background: conic-gradient(#0000 75%, #c39f76 0) 0 0/62px 62px,  radial-gradient(#c39f76 35%, white 36%) 16px 16px/62px 62px;
+    }
+  </style>
+  <body>
+    <div class="boxes">
+      <div class="box">linear gradient</div>
+      <div class="box2">radial gradient</div>
+      <div class="box3">conic gradient</div>
+      <div class="box4">radial + conic gradient</div>
+    </div>
+  </body>
+
+  <!-- /* .box {
+      background: purple url("nft.jpeg") no-repeat center;
+      background-color: blue;
+      background-size: 100px;
+    } */ -->
+
+  <!-- /* .box2 {
+      background-color: blue;
+      background: red;
+    } */ -->
+</html>
