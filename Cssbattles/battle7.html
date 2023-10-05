@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamp and Star</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        --purple: #8819f6;
+        --light: #b5d1fb;
+        --dark: #230259;
+      }
+
+      .lamp,
+      .star {
+        background-color: var(--light);
+        width: 400px;
+        height: 300px;
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+
+      .lamp::before {
+        content: "";
+        position: absolute;
+        width: 200px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: var(--dark);
+        bottom: 24px;
+      }
+
+      .lamp::after, .star::after, .star::before {
+        content: "";
+        position: absolute;
+        width: 210px;
+        aspect-ratio: 1;
+        transform: rotate(45deg);
+        background-image: linear-gradient(
+          to bottom right,
+          var(--purple) 0% 50%,
+          transparent 50%
+        );
+      }
+
+      .star::after{
+           background-image: linear-gradient(
+          to bottom right,
+          var(--purple) 0% 50%,
+          transparent 50%
+        );
+      }
+
+      .star::before{
+           background-image: linear-gradient(
+          to bottom right,
+          var(--purple) 0% 50%,
+          transparent 50%
+        );
+        transform: rotate(-135deg);
+        top: -50px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="lamp"></div>
+    <div class="star"></div>
+  </body>
+</html>
