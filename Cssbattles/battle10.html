@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working with conic gradients</title>
+    <style>
+      * {
+        --c1: #cbc35c;
+        --c2: #fffac2;
+        --c3: #cf464a;
+        --c4: #12703d;
+        --c5: #1d1714;
+      }
+
+      main {
+        width: 400px;
+        height: 300px;
+        background: var(--c1);
+        display: grid;
+        place-items: center;
+      }
+
+      .diamond {
+        width: 140px;
+        height: 140px;
+        background: #000;
+        transform: skewY(20deg);
+        rotate: -55deg;
+        /* background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg); */
+        background-image: conic-gradient(
+          from 45deg,
+          var(--c4) 90deg,
+          var(--c5) 90deg 180deg,
+          var(--c3) 180deg 270deg,
+          var(--c2) 270deg 360deg
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="diamond"></div>
+    </main>
+  </body>
+</html>
