@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --cyan: hsl(186, 34%, 60%);
+  --softRed: hsl(10, 79%, 65%);
+  --darkBrown: hsl(25, 47%, 15%);
+  --mediumBrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --paleOrange: hsl(33, 100%, 98%);
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  padding: 0 10px;
+}
+
+.orange {
+  background-color: var(--softRed);
+  padding: 17px;
+  border-radius: 10px;
+  color: var(--paleOrange);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orange p {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.orange h3 {
+  font-weight: 600;
+}
+
+.moon {
+  position: relative;
+  background-color: var(--darkBrown);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.moon::before {
+  content: "";
+  position: absolute;
+  color: black;
+  width: 33px;
+  height: 33px;
+  left: -20px;
+  border-radius: 50%;
+  border: 2px solid var(--paleOrange);
+}
+
+.white {
+  background-color: var(--paleOrange);
+  margin-top: 10px;
+  padding: 17px;
+  border-radius: 8px;
+}
+
+.white h2 {
+  color: var(--darkBrown);
+  margin-bottom: 25px;
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid var(--cream);
+}
+
+.bars {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  height: 150px;
+}
+
+.bars span {
+  width: 100%;
+  position: relative;
+  background-color: var(--softRed);
+  align-self: self-end;
+  border-radius: 3px 3px 0 0;
+  height: calc(100% * var(--barHeight));
+}
+
+.bars span:hover {
+  opacity: 0.75;
+}
+
+.bars span::before {
+  display: none;
+  content: var(--barValue);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: var(--darkBrown);
+  border-radius: 5px;
+  color: var(--paleOrange);
+  z-index: 999;
+}
+
+.bars span:hover::before{
+  display: block;
+  opacity: 1;
+}
+
+.one {
+  --barHeight: 0.2;
+  --barValue: "$20.00";
+}
+
+.two {
+  --barHeight: 0.6;
+  --barValue: "$60.00";
+}
+
+.bars span.three {
+  background: var(--cyan);
+  --barHeight: 0.85;
+  --barValue: "$85.00";
+}
+
+.four {
+  --barHeight: 0.5;
+  --barValue: "$50.00";
+}
+
+.five {
+  --barHeight: 0.38;
+  --barValue: "$38.00";
+}
+
+.six {
+  --barHeight: 0.7;
+  --barValue: "$70.00";
+}
+
+.seven {
+  --barHeight: 0.45;
+  --barValue: "$45.00";
+}
+
+.labels {
+  color: var(--mediumBrown);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+}
+
+.labels span {
+  font-size: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  /* border: 1px solid  blue; */
+}
+
+.month p{
+margin-bottom: 4px;
+}
+.percent {
+  text-align: right;
+  align-self: flex-end;
+}
+
+.percent h5 {
+  font-size: 12px;
+}
+
+.month p, .percent p {
+  font-size: 12px;
+  color: var(--mediumBrown);
+}
+
+#high5:hover ~ p {
+background-color: black;
+}
+
+@media only screen and (min-width:475px) {
+  .container {
+    width: 350px;
+    margin: 0 auto;
+  }
+}

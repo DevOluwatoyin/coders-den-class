@@ -1,0 +1,8 @@
+.first img {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.visible img {
+  opacity: 1;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    main,
+    div {
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    main {
+      width: 400px;
+      height: 300px;
+      background-color: #791e4d;
+    }
+
+    div,
+    span,
+    main::after,
+    main::before,
+    div::after,
+    div::before,
+    span::after,
+    span::before {
+      height: 150px;
+      width: 50px;
+      background-color: #ffc5dd;
+    }
+
+    div,
+    span {
+      background-color: transparent;
+    }
+
+    span {
+      position: absolute;
+    }
+
+    main::after,
+    main::before,
+    div::after,
+    div::before,
+    span::after,
+    span::before {
+      content: "";
+      position: absolute;
+    }
+
+    main::after,
+    div::before,
+    span::after {
+      transform: rotate(-45deg);
+    }
+
+    div::after,
+    main::before,
+    span::before {
+      transform: rotate(45deg);
+    }
+
+    main::after {
+      left: 74px;
+    }
+
+    div::after {
+      left: -100px;
+    }
+
+    div::before {
+      left: -29.8px;
+    }
+
+    main::before {
+      right: 204.85px;
+    }
+
+    span::after {
+      right: -40px;
+    }
+
+    span::before {
+      right: -40px;
+    }
+  </style>
+  <body>
+    <main>
+      <div></div>
+      <span></span>
+    </main>
+  </body>
+</html>

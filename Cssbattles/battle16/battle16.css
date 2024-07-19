@@ -1,0 +1,17 @@
+.container {
+  display: grid;
+  place-content: center;
+}
+
+.file-input {
+  display: none;
+}
+
+.images img {
+  width: 100%;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+}

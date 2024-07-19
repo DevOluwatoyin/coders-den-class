@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="./battle16.css" />
+  </head>
+  <body>
+    <main class="container">
+      <label for="upload">
+        <img src="./upload.jpg" alt="upload file" width="50px" />
+        <span> Click to upload image(s) </span>
+        <input
+          type="file"
+          name="upload"
+          accept="image/jpg, image/png"
+          id="upload"
+          class="file-input"
+          multiple
+          onchange="ShowImage()"
+        />
+      </label>
+
+      <div class="images" id="images"></div>
+    </main>
+
+    <script src="battle16.js"></script>
+  </body>
+</html>

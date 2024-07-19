@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battle 9</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        --bg: #f5d6b4;
+        --bd: #d86f45;
+      }
+
+      .cream {
+        background-color: var(--bg);
+        width: 400px;
+        height: 300px;
+      }
+
+      .shape,
+      .cream {
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+
+      .cream::after,
+      .cream::before,
+      .shape::before,
+      .shape::after,
+      .circle::before,
+      .circle::after {
+        content: "";
+        background-color: var(--bd);
+        position: absolute;
+      }
+
+      .cream::before {
+        width: 50px;
+        aspect-ratio: 1;
+        top: 40px;
+        border-radius: 50%;
+      }
+
+      .shape::before {
+        width: 82px;
+        aspect-ratio: 4;
+        border-radius: 10px 10px 20px 20px;
+        top: -55px;
+        z-index: 11;
+      }
+
+      .shape::after {
+        width: 135px;
+        aspect-ratio: 2;
+        top: -30px;
+      }
+
+      .cream::after {
+        width: 135px;
+        aspect-ratio: 3.6;
+        border-radius: 20px 20px 10px 10px;
+        bottom: 70px;
+        z-index: 11;
+      }
+
+      .circle::after,
+      .circle::before {
+        width: 130px;
+        aspect-ratio: 1;
+        z-index: 10;
+        border-radius: 50%;
+        bottom: -48px;
+        background-color: var(--bg);
+      }
+
+      .circle::after {
+        left: 21px;
+      }
+
+      .circle::before {
+        right: 21px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cream">
+      <div class="shape">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </body>
+</html>

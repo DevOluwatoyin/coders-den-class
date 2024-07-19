@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>Css battles</title>
+    <style>
+      :root {
+        --color-one: #926927;
+        --color-two: #f8b140;
+        --color-three: #ffebcb;
+        --test12: 210, 33, 33;
+        /* --tst22: rgba(210, 33, 33, 0); */
+      }
+      /* rgb() */
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #92692799;
+      }
+
+      main {
+        background-color: var(--color-one);
+        width: 400px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .circle {
+        height: 200px;
+        position: relative;
+        aspect-ratio: 1;
+        background: linear-gradient(
+          to right,
+          var(--color-two) 50%,
+          var(--color-three) 50%
+        );
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      .viewport {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        background-color: aqua;
+      }
+
+      .box {
+        width: 500px;
+        aspect-ratio: 1;
+        background-color: yellow;
+        z-index: 100;
+        position: relative;
+        --text-size: 24px;
+      }
+
+      .box::before {
+        content: "the child element before";
+        width: 200px;
+        aspect-ratio: 1; 
+        background-color: rgba(var(--test12), 0.9);
+        /* background-color: #926927; */
+        font-size: var(--text-size);
+        padding: var(--text-size);
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+
+      .box:hover {
+          background-color: rgba(var(--test12), 0.80);
+        }
+        
+        .box::after {
+        background-color: rgba(var(--test12), 0.10);
+        content: "the child element after";
+        width: 200px;
+        margin: 10px 0 0;
+        aspect-ratio: 1;
+        background-color: #926927;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <aside class="child">the child element gangan</aside>
+    </div>
+    <!-- <main>
+      <div class="circle"></div>
+    </main> -->
+    <!-- <div class="viewport"></div> -->
+  </body>
+</html>

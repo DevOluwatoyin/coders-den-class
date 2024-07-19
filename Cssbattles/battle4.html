@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css battle 4</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      main {
+        width: 400px;
+        height: 300px;
+        --yellow: #f7ed5a;
+        --purple: #5e2d8c;
+        background: var(--purple);
+        display: grid;
+        place-items: center;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+
+      main::before,
+      div::before,
+      div::after {
+        color: red;
+        content: "";
+        width: 40px;
+        position: absolute;
+        /* border-image: linear-gradient(red, blue); */
+      }
+
+      main::before {
+        height: 41px;
+        background-color: var(--purple);
+        top: 50px;
+        z-index: 1;
+      }
+
+      div {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        border: 41px solid var(--yellow);
+        /* border-image: linear-gradient(to right, red, blue, green) 60; */
+      }
+
+      div::before,
+      div::after {
+        aspect-ratio: 1;
+        background-color: var(--yellow);
+        top: 35px;
+      }
+
+      div::before {
+        left: 49px;
+      }
+
+      div::after {
+        right: 49px;
+      }
+    </style>
+  </head>
+  <body>
+    <main><div></div></main>
+  </body>
+</html>

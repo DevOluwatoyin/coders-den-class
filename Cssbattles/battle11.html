@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog bone</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        --purple: #8647e6;
+        --yellow: #efeb99;
+      }
+
+      main {
+        display: grid;
+        place-items: center;
+        background: var(--yellow);
+        width: 400px;
+        height: 300px;
+      }
+
+      .first,
+      .second {
+        background-color: var(--purple);
+        width: 28px;
+        height: 180px;
+      }
+
+      .first {
+        position: relative;
+        transform: rotate(45deg);
+      }
+
+      .first::before,
+      .first::after,
+      .btm1::before,
+      .btm1::after,
+      .second::before,
+      .second::after,
+      .btm2::before,
+      .btm2::after {
+        content: "";
+        width: 28px;
+        aspect-ratio: 1;
+        position: absolute;
+        border-radius: 50%;
+        background-color: var(--purple);
+      }
+
+      .first::before,
+      .first::after,
+      .second::before,
+      .second::after {
+        top: -13px;
+      }
+
+      .first::before,
+      .btm1::before,
+      .second::before,
+      .btm2::before {
+        left: -14px;
+      }
+
+      .first::after,
+      .btm1::after,
+      .second::after,
+      .btm2::after {
+        right: -14px;
+      }
+
+      .btm1::before,
+      .btm1::after,
+      .btm2::before,
+      .btm2::after {
+        bottom: -14px;
+      }
+
+      .second {
+        position: absolute;
+        transform: rotate(-45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="first">
+        <span class="btm1"></span>
+      </div>
+      <div class="second">
+        <span class="btm2"></span>
+      </div>
+    </main>
+  </body>
+</html>
