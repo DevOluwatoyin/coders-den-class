@@ -1,0 +1,104 @@
+:root {
+  --clr-purple: #381fd1;
+  --clr-dark-purple: #11284b;
+  --clr-gray: #11284b;
+  --clr-white-10: #ffffff;
+  --clr-white-20: #f6f6eb;
+  --clr-white-30: #f3f2fc;
+
+  --fs-sm: 0.875rem;
+}
+
+@font-face {
+  font-family: ArminGroteskBlack;
+  src: url(./fonts/ArminGroteskBlack-76ff9f78711803f467ea998d64eb36e7.otf);
+}
+
+@font-face {
+  font-family: ArminGrotesk;
+  src: url(./fonts/ArminGroteskRegular-a45514f0f38597a12fa584842b6bab6e.otf);
+}
+
+@font-face {
+  font-family: ArminGroteskSemiBold;
+  src: url(./fonts/ArminGroteskSemiBold-8d0cb702db59487a047e382aa1ffc189.otf);
+}
+
+@font-face {
+  font-family: RobotoMonoBold;
+  src: url(./fonts/RobotoMonoBold-1d29748c6ba7e786c050c2ba9f0e73b1.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ArminGrotesk, sans-serif;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: var(--clr-white-20);
+  padding: 10px 20px;
+}
+
+.nav-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav-links {
+  width: 50%;
+}
+
+.nav-list {
+  width: 100%;
+}
+
+.nav-list li a {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: var(--clr-purple);
+  font-family: ArminGroteskBlack;
+  /* max-width: fit-content; */
+  border-width: 2px;
+  padding: 8px;
+  /* border-radius: 5px; */
+}
+
+.nav-list li a:hover,
+#login:hover {
+  border: 2px solid var(--clr-purple);
+  border-radius: 4px;
+}
+
+.nav-btns {
+  width: 25%;
+  text-transform: uppercase;
+}
+
+#login {
+  color: var(--clr-purple);
+  padding: 5px;
+}
+
+#free-trial {
+  color: var(--clr-white-10);
+  background-color: var(--clr-purple);
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+#free-trial:hover {
+  opacity: 0.9;
+}
